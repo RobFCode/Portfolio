@@ -7,12 +7,12 @@
 }
 @font-face {
   font-family: "RFCfont";
-  src: url("./fonts/HiR.otf");
+  src: url("./fonts/HiB.otf");
   font-weight: bold;
 }
 :root {
   --logofont: "RFCfont", Verdana, Arial, Helvetica, "Sans Serif";
-  --sitefont: Verdana, Arial, Helvetica, "Sans Serif";
+  --sitefont: Tahoma, Verdana, Arial, Helvetica, "Sans Serif";
   --color1: #86C232;
   --color2: #61892F;
   --color3: #222629;
@@ -22,15 +22,7 @@
 }
 /* Inital html, body and scroll bar styling */
 html {
-  font-size: 16px;
-    
-  @media screen and (min-width: 900px) {
-    font-size: 18px;
-  }
-    
-  @media screen and (min-width: 1200px) {
-    font-size: 20px;
-  }
+  font-size: 14px;
 }
 body::-webkit-scrollbar {
   width: 8px;
@@ -44,6 +36,8 @@ body {
   scrollbar-color: var(--color1);
   font-family: var(--sitefont);
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 body::-webkit-scrollbar-track {
   background: var(--color4);
@@ -52,16 +46,125 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--color1) ;
   border-radius: 2px;
 }
+h2 {
+  font-size: 2em;
+  font-family: var(--logofont);
+  text-decoration: underline;
+}
+h3 {
+  font-size: 1.1em;
+  font-family: var(--logofont);
+  color: var(--color6);
+}
+a {
+  font-family: var(--logofont);
+  text-decoration: none;
+  color: var(--color5);
+  font-weight: bold;
+}
+a:hover {
+  color: var(--color1);
+  transition: 0.2s linear;
+}
+img {
+  border-radius: 8px;
+  opacity: 0.6;
+}
+img:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
 
 /* Logo Styling */
 .logo {
   font-family: var(--logofont);
+  font-weight: normal;
   font-size: 7rem;
-  padding: 0.2rem;
-  margin: 0.4rem;
+  padding: 3rem 0 0 0;
+  margin: 0;
 }
 .site-address {
   color: var(--color2);
   font-family: var(--logofont);
+  padding: 0;
+  margin: 0 0 3rem 0;
   font-weight: bold;
+}
+
+/* Project Section Styling */
+.project {
+  max-width: 800px;
+  padding: 0 20%;
+  margin: 40px auto;
+  color: var(--color1);
+}
+.bgchange1 {
+  height: 4rem;
+  line-height: 4rem;
+  background-color: var(--color2);
+}
+
+/* About Section Styling */
+.about {
+  max-width: 800px;
+  padding: 0 20%;
+  margin: 20px auto;
+  color: var(--color1);
+}
+
+
+/* Footer Section Styling */
+footer {
+  height: 40px;
+  line-height: 40px;
+  font-size: 0.9rem;
+  background-color: var(--color2);
+  color: var(--color6);
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 5rem;
+    padding: 16px 0px 5px;
+  }
+  .site-address {
+    margin: 0 0 3rem 0;
+  }
+  h2 {
+    font-size: 1.8rem;
+    padding: 0;
+    margin: 0;
+  }
+  .project {
+    padding: 0 10%;
+  }
+  .about {
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .logo {
+    font-size: 3.6rem;
+    padding: 16px 0px 5px;
+  }
+  .site-address {
+    margin: 0 0 3rem 0;
+  }
+  h2 {
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+  }
+  .project {
+    padding: 0 15px;
+  }
+  .about {
+    padding: 0 15px;
+  }
+  img {
+    width: 280px;
+  }
 }
