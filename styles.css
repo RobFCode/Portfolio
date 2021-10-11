@@ -1,0 +1,67 @@
+/* Styles for RobFCode Portfolio Website (Rob Fagg) - www.robfcode.co.uk */
+
+/* Root Variables and Fonts */
+@font-face {
+  font-family: "RFCfont";
+  src: url("./fonts/HiR.otf");
+}
+@font-face {
+  font-family: "RFCfont";
+  src: url("./fonts/HiR.otf");
+  font-weight: bold;
+}
+:root {
+  --logofont: "RFCfont", Verdana, Arial, Helvetica, "Sans Serif";
+  --sitefont: Verdana, Arial, Helvetica, "Sans Serif";
+  --color1: #86C232;
+  --color2: #61892F;
+  --color3: #222629;
+  --color4: #474B4F;
+  --color5: #6B6E70;
+  --color6: #ffffff;
+}
+/* Inital html, body and scroll bar styling */
+html {
+  font-size: 16px;
+    
+  @media screen and (min-width: 900px) {
+    font-size: 18px;
+  }
+    
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+body {
+  box-sizing: border-box;
+  background-color: var(--color3);
+  color: var(--color6);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color1);
+  font-family: var(--sitefont);
+  text-align: center;
+}
+body::-webkit-scrollbar-track {
+  background: var(--color4);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color1) ;
+  border-radius: 2px;
+}
+
+/* Logo Styling */
+.logo {
+  font-family: var(--logofont);
+  font-size: 7rem;
+  padding: 0.2rem;
+  margin: 0.4rem;
+}
+.site-address {
+  color: var(--color2);
+  font-family: var(--logofont);
+  font-weight: bold;
+}
